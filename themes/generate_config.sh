@@ -3,7 +3,7 @@
 I3_CONF_PATH=~/.config/themes/active/i3.conf
 POLYBAR_CONF_PATH=~/.config/themes/active/polybar_conf.ini
 POLYBAR_COLOR_CONF_PATH=~/.config/themes/active/polybar_color_conf.ini
-ALACRITTY_CONF_PATH=~/.config/themes/active/alacritty.yml
+ALACRITTY_CONF_PATH=~/.config/themes/active/alacritty_conf.yml
 PICOM_CONF_PATH=~/.config/themes/active/picom.conf
 
 # Functions
@@ -11,21 +11,22 @@ get_variable() {
 	local variable=$(cat ~/.config/themes/$2 | sed -n -e "/$1/ s/.*\= *//p")
 	echo $variable
 }
+# I3
 append_variable_i3() {
 	echo "set \$$1 $2" >> $I3_CONF_PATH
 }
-
+# Polybar
 append_variable_polybar() {
 	echo "$1 = $2" >> $POLYBAR_CONF_PATH
 }
 append_variable_polybar_color() {
 	echo "$1 = $2" >> $POLYBAR_COLOR_CONF_PATH
 }
-
+# Allacritty
 append_variable_alacritty() {
 	echo "$1: $2" >> $ALACRITTY_CONF_PATH
 }
-
+# Picom
 append_variable_picom() {
 	echo "$1 = $2;" >> $PICOM_CONF_PATH
 }
@@ -152,9 +153,12 @@ append_variable_alacritty "    magenta" "'$C_PURPLE'"
 append_variable_alacritty "    cyan" "'$C_CYAN'"
 append_variable_alacritty "    white" "'$C_L1'"
 
-#Generate Picom Config File
+# Generate Picom Config File
 cp ~/.config/themes/picom.txt $PICOM_CONF_PATH
 
 append_variable_picom "# Generated Config Part"
 append_variable_picom "corner-radius" "$RADIUS"
 append_variable_picom "round-borders" "$RADIUS"
+
+# Configure Flameshot Colors
+flameshot config -k $C_BLUE -m $C_LIGHT_BLUE

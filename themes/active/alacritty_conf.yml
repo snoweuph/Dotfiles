@@ -1,0 +1,25 @@
+
+#Window Config: 
+window: 
+  padding: 
+    x: 3
+    y: 3
+  opacity: 0.8
+# Font Config: 
+font: 
+  normal: 
+    family: "Hack Nerd Font Mono"
+# Color Config: 
+colors: 
+  primary: 
+    background: '#2e3440'
+    foreground: '#d8dee9'
+  normal: 
+    black: '#2e3440'
+    red: '#bf616a'
+    green: '#a3be8c'
+    yellow: '#ebcb8b'
+    blue: '#5e81ac'
+    magenta: '#b48ead'
+    cyan: '#8fbcbb'
+    white: '#d8dee9'

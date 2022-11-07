@@ -1,0 +1,15 @@
+d1=#2e3440
+d2=#3b4252
+d3=#434c5e
+d4=#4c566a
+l1=#d8dee9
+l2=#e5e9f0
+l3=#eceff4
+red=#bf616a
+orange=#d08770
+yellow=#ebcb8b
+green=#a3be8c
+cyan=#8fbcbb
+light_blue=#88c0d0
+dark_blue=#5e81ac
+purple=#b48ead
