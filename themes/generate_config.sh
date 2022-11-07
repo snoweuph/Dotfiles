@@ -5,7 +5,8 @@ POLYBAR_CONF_PATH=~/.config/themes/active/polybar_conf.ini
 POLYBAR_COLOR_CONF_PATH=~/.config/themes/active/polybar_color_conf.ini
 ALACRITTY_CONF_PATH=~/.config/themes/active/alacritty_conf.yml
 PICOM_CONF_PATH=~/.config/themes/active/picom.conf
-
+DUNST_COLOR_CONF_PATH=~/.config/dunst/dunstrc.d/00.color.conf
+DUNST_CONF_PATH=~/.config/dunst/dunstrc.d/99.base.conf
 # Functions
 get_variable() {
 	local variable=$(cat ~/.config/themes/$2 | sed -n -e "/$1/ s/.*\= *//p")
@@ -30,7 +31,13 @@ append_variable_alacritty() {
 append_variable_picom() {
 	echo "$1 = $2;" >> $PICOM_CONF_PATH
 }
-
+#Dunst
+append_variable_dunst() {
+	echo "$1 = $2" >> $DUNST_CONF_PATH
+}
+append_variable_dunst_color() {
+		echo "$1 = $2" >> $DUNST_COLOR_CONF_PATH
+}
 # Read Base.txt
 THEME="$(get_variable "theme" "base.txt")"
 GAPS="$(get_variable "gaps" "base.txt")"
@@ -168,3 +175,23 @@ flameshot config -k $C_BLUE -m $C_LIGHT_BLUE
 
 # Apply Rofi Theme
 echo "@theme \"$ROFI_THEME\"" > ~/.config/rofi/config.rasi
+
+# Generate Dunst Config Files
+echo "[global]" > $DUNST_CONF_PATH
+echo "[global]" > $DUNST_COLOR_CONF_PATH
+
+append_variable_dunst "    gap_size" "$GAPS"
+append_variable_dunst "    corner_radius" "$RADIUS"
+append_variable_dunst "    font" "$FONT_FAMILY $(($FONT_SIZE - 4))"
+
+append_variable_dunst_color "    frame_color" "\"$C_GREEN\""
+append_variable_dunst_color "[urgency_low]"
+append_variable_dunst_color "  	 background" "\"$C_D2\""
+append_variable_dunst_color "    foreground" "\"$C_L1\""
+append_variable_dunst_color "[urgency_normal]"
+append_variable_dunst_color "    background" "\"$C_D2\""
+append_variable_dunst_color "    foreground" "\"$C_L1\""
+append_variable_dunst_color "[urgency_critical]"
+append_variable_dunst_color "    background" "\"$C_D1\""
+append_variable_dunst_color "    foreground" "\"$C_ORANGE\""
+append_variable_dunst_color "    frame_color" "\"$C_RED\""
