@@ -1,0 +1,8 @@
+theme=nord
+gaps=12
+radius=12
+font-size=14
+font-family=Hack Nerd Font
+bar-font-line-height=4
+opacity=0.8
+padding=3

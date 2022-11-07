@@ -1,0 +1,55 @@
+#################################
+#	       Base		#
+#################################
+use-damage = true;
+backend= "glx";
+
+#################################
+#             Shadows           #
+#################################
+shadow = false;
+shadow-radius = 7;
+shadow-offset-x = -7;
+shadow-offset-y = -7;
+shadow-exclude = [
+  "name = 'Notification'",
+  "class_g = 'Conky'",
+  "class_g ?= 'Notify-osd'",
+  "class_g = 'Cairo-clock'",
+  "_GTK_FRAME_EXTENTS@:c"
+];
+
+
+#################################
+#           Fading              #
+#################################
+fading = true;
+fade-in-step = 0.03;
+fade-out-step = 0.03;
+
+
+#################################
+#   Transparency / Opacity      #
+#################################
+inactive-opacity = 1.0;
+frame-opacity = 0.7;
+inactive-opacity-override = false;
+focus-exclude = [ "class_g = 'Cairo-clock'" ];
+
+
+#################################
+#           Corners             #
+#################################
+round-borders-rule = [
+  "6:window_type = 'unknown'",
+  "6:window_type = 'toolbar'",
+  "6:window_type = 'utility'",
+  "6:window_type = 'splash'",
+  "6:window_type = 'dialog'",
+  "6:window_type = 'normal'"
+];
+# Exclude conditions for rounded corners.
+#rounded-corners-exclude = [
+#  "window_type = 'dock'",
+#  "window_type = 'desktop'"
+#];
