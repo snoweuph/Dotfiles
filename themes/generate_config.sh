@@ -64,6 +64,9 @@ C_LIGHT_BLUE="$(get_variable "light_blue" "color_schemes/$THEME.txt")"
 C_BLUE="$(get_variable "dark_blue" "color_schemes/$THEME.txt")"
 C_PURPLE="$(get_variable "purple" "color_schemes/$THEME.txt")"
 
+# Read Rofi Theme Path
+ROFI_THEME="$(get_variable "rofi_theme_path" "color_schemes/$THEME.txt")"
+
 # Generate I3 Config File
 echo "" > $I3_CONF_PATH
 
@@ -162,3 +165,6 @@ append_variable_picom "round-borders" "$RADIUS"
 
 # Configure Flameshot Colors
 flameshot config -k $C_BLUE -m $C_LIGHT_BLUE
+
+# Apply Rofi Theme
+echo "@theme \"$ROFI_THEME\"" > ~/.config/rofi/config.rasi

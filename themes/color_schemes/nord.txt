@@ -13,3 +13,4 @@ cyan=#8fbcbb
 light_blue=#88c0d0
 dark_blue=#5e81ac
 purple=#b48ead
+rofi_theme_path=/home/snoweuph/.local/share/rofi/themes/nord.rasi
