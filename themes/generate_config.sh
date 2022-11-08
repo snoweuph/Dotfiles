@@ -74,6 +74,10 @@ C_PURPLE="$(get_variable "purple" "color_schemes/$THEME.txt")"
 # Read Rofi Theme Path
 ROFI_THEME="$(get_variable "rofi_theme_path" "color_schemes/$THEME.txt")"
 
+# Read Folder Paths
+WALLPAPER_FOLDER="$(get_variable "wallpaper-folder" "base.txt")"
+SCREENSHOT_FOLDER="$(get_variable "screenshot-folder" "base.txt")"
+
 # Generate I3 Config File
 echo "" > $I3_CONF_PATH
 
@@ -101,6 +105,10 @@ append_variable_i3 "c_gapSize" "$GAPS"
 append_variable_i3 "c_borderRadius" "$RADIUS"
 append_variable_i3 "c_fontFamily" "$FONT_FAMILY"
 append_variable_i3 "c_fontSize" "$FONT_SIZE"
+
+# Write Variable to start up Flameshot
+echo "# Flameshot for Screenshoting" >> $I3_CONF_PATH
+echo "bindsym \$mod+Shift+s exec --no-startup-id flameshot gui --clipboard --accept-on-select --path $SCREENSHOT_FOLDER" >> $I3_CONF_PATH
 
 # Generate Polybar Config File
 echo "[conf]" > $POLYBAR_CONF_PATH

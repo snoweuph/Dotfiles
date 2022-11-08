@@ -158,6 +158,3 @@ exec --no-startup-id ~/.fehbg
 
 #KDE Connect
 exec --no-startup-id kdeconnect-indicator
-
-# Flameshot for Screenshoting
-bindsym $mod+Shift+s exec --no-startup-id flameshot gui --clipboard --accept-on-select --path ~/Bilder/screenshots
