@@ -73,9 +73,10 @@ C_PURPLE="$(get_variable "purple" "color_schemes/$THEME.txt")"
 
 # Read Rofi Theme Path
 ROFI_THEME="$(get_variable "rofi_theme_path" "color_schemes/$THEME.txt")"
+BG="$(get_variable "wallpapers" "color_schemes/$THEME.txt")"
 
 # Read Folder Paths
-WALLPAPER_FOLDER="$(get_variable "wallpaper-folder" "base.txt")"
+#WALLPAPER_FOLDER="$(get_variable "wallpaper-folder" "base.txt")"
 SCREENSHOT_FOLDER="$(get_variable "screenshot-folder" "base.txt")"
 
 # Generate I3 Config File
@@ -184,6 +185,11 @@ flameshot config -k $C_BLUE -m $C_LIGHT_BLUE
 
 # Apply Rofi Theme
 echo "@theme \"$ROFI_THEME\"" > ~/.config/rofi/config.rasi
+
+# Apply Wallpaper
+echo "#!/bin/bash 
+feh --no-fehbg --bg-scale $BG" > ~/.fehbg
+~/.fehbg
 
 # Generate Dunst Config Files
 echo "[global]" > $DUNST_CONF_PATH

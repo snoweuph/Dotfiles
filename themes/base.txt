@@ -7,4 +7,3 @@ bar-font-line-height=4
 opacity=0.8
 padding=3
 screenshot-folder=~/Bilder/Screenshots
-wallpaper-folder=~/Bilder/Wallpaper
