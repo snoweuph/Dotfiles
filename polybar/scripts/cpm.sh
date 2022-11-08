@@ -8,7 +8,7 @@ KEYBOARD_ID="Cooler Master Technology Inc. SK650"
 METRIC=cpm
 FORMAT=" %d$METRIC"
 
-INTERVAL=15
+INTERVAL=2,5
 
 # If you have a keyboard layout that is not listed here yet, create a condition
 # yourself. $3 is the key index. Use `xinput test "AT Translated Set 2 keyboard"`
