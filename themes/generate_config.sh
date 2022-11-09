@@ -42,10 +42,12 @@ append_variable_dunst_color() {
 THEME="$(get_variable "theme" "base.txt")"
 GAPS="$(get_variable "gaps" "base.txt")"
 RADIUS="$(get_variable "radius" "base.txt")"
+BORDER="$(get_variable "border" "base.txt")"
 FONT_FAMILY="$(get_variable "font-family" "base.txt")"
 FONT_SIZE="$(get_variable "font-size" "base.txt")"
 OPACITY="$(get_variable "opacity" "base.txt")"
 PADDING="$(get_variable "padding" "base.txt")"
+
 
 # Read Picom Base
 
@@ -104,6 +106,7 @@ append_variable_i3 "c_purple" "\"$C_PURPLE\""
 # write Other Variables
 append_variable_i3 "c_gapSize" "$GAPS"
 append_variable_i3 "c_borderRadius" "$RADIUS"
+append_variable_i3 "c_borderSize" "$BORDER"
 append_variable_i3 "c_fontFamily" "$FONT_FAMILY"
 append_variable_i3 "c_fontSize" "$FONT_SIZE"
 
