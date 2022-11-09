@@ -6,9 +6,9 @@ case "$1" in
         ;;
     *)
         if [ "$(dunstctl is-paused)" = "true" ]; then
-            echo ""
+            echo "%{F$2} $(dunstctl count waiting)"
         else
-            echo ""
+            echo "%{F$1} $(dunstctl count displayed)"
         fi
         ;;
 esac

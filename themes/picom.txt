@@ -49,6 +49,6 @@ round-borders-rule = [
   "6:window_type = 'normal'"
 ];
 # Exclude conditions for rounded corners.
-rounded-corners-exclude = [
-  "class_g = 'i3-frame'"
-];
+#rounded-corners-exclude = [
+#  "class_g = 'i3-frame'"
+#];
