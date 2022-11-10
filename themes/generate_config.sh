@@ -158,7 +158,7 @@ append_variable_alacritty "  opacity" "$OPACITY"
 append_variable_alacritty "# Font Config"
 append_variable_alacritty "font"
 append_variable_alacritty "  normal"
-append_variable_alacritty "    family" "\"$FONT_FAMILY Mono\""
+append_variable_alacritty "    family" "\"$FONT_FAMILY\""
 
 # write Colors
 append_variable_alacritty "# Color Config"
