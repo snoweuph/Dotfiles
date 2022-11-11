@@ -41,9 +41,8 @@ exec_always ~/.config/polybar/scripts/launch.sh
 # start rofi (Program launcher)
 bindsym $mod+d exec --no-startup-id TERMINAL=/usr/bin/xfce4-terminal rofi -show drun
 
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
+# Open Powermenu
+bindsym $mod+Shift+e exec "~/.config/rofi/scripts/powermenu.sh"
 # Load Wallpaper
 exec --no-startup-id ~/.fehbg
 
