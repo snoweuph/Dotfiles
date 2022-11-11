@@ -103,7 +103,7 @@ case ${chosen} in
 		if [[ -x '/usr/bin/betterlockscreen' ]]; then
 			betterlockscreen -l
 		elif [[ -x '/usr/bin/i3lock' ]]; then
-			i3lock
+			i3lock -i ~/Bilder/Wallpaper/Landscape/Nord/nord-rainbow-waves-long.png -t
 		fi
         ;;
     $suspend)
