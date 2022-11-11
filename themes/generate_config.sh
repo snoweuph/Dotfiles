@@ -140,7 +140,8 @@ append_variable_polybar_color "c_purple" "$C_PURPLE"
 # write Other Variables
 append_variable_polybar "gap-size" "$GAPS"
 append_variable_polybar "border-radius" "$RADIUS"
-append_variable_polybar "font" "$FONT_FAMILY:pixelsize=$((($FONT_SIZE * 18) / 10));$BAR_FONT_LINE_HEIGHT"
+append_variable_polybar "font" "$FONT_FAMILY:pixelsize=$((($FONT_SIZE * 18) / 10));$(($BAR_FONT_LINE_HEIGHT - ($FONT_SIZE * 18 / 10)))"
+append_variable_polybar "font-workspaces" "$FONT_FAMILY:pixelsize=$((($FONT_SIZE * 23) / 10));$((($BAR_FONT_LINE_HEIGHT * 2 - ($FONT_SIZE * 24 / 10)) / 4))"
 append_variable_polybar "cava-exec-string" "~/.config/polybar/scripts/cava.sh \"$C_PURPLE\" \"$C_BLUE\" \"$C_LIGHT_BLUE\" \"$C_CYAN\"  \"$C_GREEN\" \"$C_YELLOW\" \"$C_ORANGE\" \"$C_RED\""
 append_variable_polybar "dunst-snooze-exec-string" "~/.config/polybar/scripts/dunst-snooze.sh \"$C_L1\" \"$C_RED\"" 
 # Generate Alacritty Config File
