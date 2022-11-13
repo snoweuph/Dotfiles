@@ -14,3 +14,12 @@ set $mod Mod4
 include ./conf/bindings.conf
 # Workspaces
 include ./conf/workspaces.conf
+# Colors
+include ./conf/colors.conf
+# Fonts
+include ./conf/fonts.conf
+
+# Stylings
+include ./conf/styling.conf
+# Apps
+include ./conf/apps.conf

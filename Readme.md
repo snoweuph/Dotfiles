@@ -90,6 +90,7 @@ I've created a Dir under .config called Rice Bowl which is something like the Ri
 |     |__"80-styling.conf"
 |
 |__"polybar/"
+|  |__"launch.sh"
 |  |__"config.ini"
 |  |
 |  |__"config/"

@@ -46,7 +46,7 @@ set \$font_size_icons_big $RICE_FONT_SIZE_ICONS_BIG
 
 " > $RICE_I3_DIR_CONF/fonts.conf
 
-# Generate styling.conf
+# Generate styling2.conf
 echo "# $RICE_GENERATED_HEADER
 set \$padding $RICE_PADDING
 set \$gap_size $RICE_GAPS
@@ -55,9 +55,29 @@ set \$border_radius $RICE_BORDER_RADIUS
 set \$border_size $RICE_BORDER_THICKNESS
 
 set \$opacity $RICE_OPACITY_FLOAT
-" > $RICE_I3_DIR_CONF/styling1.conf
+" > $RICE_I3_DIR_CONF/styling2.conf
 
 # Generate apps2.conf
 echo "# $RICE_GENERATED_HEADER
 
+# start a terminal
+bindsym \$mod+Return exec alacritty
+
+# start rofi
+bindsym \$mod+d exec --no-startup-id rofi -show drun
+
+# open the powermenu
+bindsym \$mod+Shift+e exec \"$RICE_DIR_CONFIG/scripts/powermenu.sh\"
+
+# take a screenshot
+bindsym \$mod+Shift+s exec --no-startup-id flameshot gui --clipboard --accept-on-select --path $RICE_DIR_SCREENSHOTS
+
+# start picom
+exec --no-startup-id picom -b --config $RICE_DIR_CONFIG/picom/picom.conf --experimental-backend
+
+# start polybar
+exec_always $RICE_DIR_CONFIG/polybar/launch.sh
+
+# set wallpaper
+exec --no-startup-id $RICE_DIR_CONFIG/.fehbg
 " > $RICE_I3_DIR_CONF/apps2.conf
