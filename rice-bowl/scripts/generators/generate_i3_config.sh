@@ -33,13 +33,29 @@ set \$color_accent_tertiary \"$RICE_COLOR_TERTIARY_ACCENT\"
 
 # Generate fonts.conf
 echo "# $RICE_GENERATED_HEADER
+set \$font_normal $RICE_FONT_NORMAL
+set \$font_mono $RICE_FONT_MONO
+set \$font_icons $RICE_FONT_ICONS
+
+set \$font_size_small $RICE_FONT_SIZE_SMALL
+set \$font_size_normal $RICE_FONT_SIZE_NORMAL
+set \$font_size_big $RICE_FONT_SIZE_BIG
+
+set \$font_size_icons_normal $RICE_FONT_SIZE_ICONS_NORMAL
+set \$font_size_icons_big $RICE_FONT_SIZE_ICONS_BIG
 
 " > $RICE_I3_DIR_CONF/fonts.conf
 
 # Generate styling.conf
 echo "# $RICE_GENERATED_HEADER
+set \$padding $RICE_PADDING
+set \$gap_size $RICE_GAPS
 
-" > $RICE_I3_DIR_CONF/styling.conf
+set \$border_radius $RICE_BORDER_RADIUS
+set \$border_size $RICE_BORDER_THICKNESS
+
+set \$opacity $RICE_OPACITY_FLOAT
+" > $RICE_I3_DIR_CONF/styling1.conf
 
 # Generate apps2.conf
 echo "# $RICE_GENERATED_HEADER

@@ -70,6 +70,7 @@ I've created a Dir under .config called Rice Bowl which is something like the Ri
 |  |  |__"apps2.conf"
 |  |  |__"workspaces.conf"
 |  |  |__"styling.conf"
+|  |  |__"styling1.conf
 |  |  |__"rules.conf"
 |  |
 |  |__"scripts"
