@@ -1,0 +1,7 @@
+#!/bin/bash
+
+RICE_DIR_CONFIG=~/Workspaces/rice
+RICE_DIR_FONTS=/usr/share/fonts
+RICE_DIR_IMAGES=~/Bilder
+RICE_DIR_WALLPAPER=$RICE_DIR_IMAGES/Wallpaper
+RICE_DIR_SCREENSHOTS=$RICE_DIR_IMAGES/Screenshots
