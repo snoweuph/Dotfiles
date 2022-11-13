@@ -1,6 +1,7 @@
 #!/bin/bash
 
-RICE_DIR_CONFIG=~/Workspaces/rice
+RICE_DIR_CONFIG=~/Workspace/rice
+RICE_DIR_RICE_BOWL=$RICE_DIR_CONFIG/rice-bowl
 RICE_DIR_FONTS=/usr/share/fonts
 RICE_DIR_IMAGES=~/Bilder
 RICE_DIR_WALLPAPER=$RICE_DIR_IMAGES/Wallpaper

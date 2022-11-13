@@ -1,5 +1,7 @@
 #!/bin/bash
 
+RICE_THEME=nord
+
 RICE_PADDING=3
 RICE_GAPS=12
 
