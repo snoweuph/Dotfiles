@@ -4,6 +4,10 @@ RICE_ROFI_THEME=
 RICE_GTK_THEME=
 RICE_QT_THEME=
 
+RICE_WALLPAPER_1=Landscape/Nord/nord-city.jpeg
+RICE_WALLPAPER_2=Landscape/Nord/nord-city.jpeg
+RICE_WALLPAPER_3=Landscape/Nord/nord-gradient-frost-logo-1280x1024.png
+
 # Dark Tones. 4 is Darkest, 1 is Lightest
 RICE_COLOR_DARK_4=#2e3440
 RICE_COLOR_DARK_3=#3b4252
