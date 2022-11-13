@@ -66,6 +66,7 @@ I've created a Dir under .config called Rice Bowl which is something like the Ri
 |  |  |__"colors.conf"
 |  |  |__"fonts.conf"
 |  |  |__"bindings.conf"
+|  |  |__"apps.conf"
 |  |  |__"workspaces.conf"
 |  |  |__"styling.conf"
 |  |  |__"rules.conf"

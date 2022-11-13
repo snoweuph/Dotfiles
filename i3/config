@@ -1,0 +1,16 @@
+#############################################################################
+# i3 config file (v4)                                                       #
+# Please see https://i3wm.org/docs/userguide.html for a complete reference! #
+#############################################################################
+
+# Set Mod Key
+set $mod Mod4
+
+##########################
+#      Include Files     #
+##########################
+
+# Bindings
+include ./conf/bindings.conf
+# Workspaces
+include ./conf/workspaces.conf

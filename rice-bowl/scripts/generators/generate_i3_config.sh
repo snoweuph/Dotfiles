@@ -1,0 +1,5 @@
+#!/bin/bash
+
+RICE_I3_PATH=$RICE_DIR_CONFIG/i3
+
+echo $RICE_I3_PATH
