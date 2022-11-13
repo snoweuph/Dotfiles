@@ -1,3 +1,0 @@
-# Import Base Config
-import:
-  - ~/.config/themes/active/alacritty_conf.yml
