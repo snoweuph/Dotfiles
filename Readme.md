@@ -2,6 +2,14 @@
 
 I've created a Dir under .config called Rice Bowl which is something like the Rice Controller / Master
 
+## Install Dependencies
+
+### Fedora
+
+```
+sudo dnf install i3 zsh alacritty polybar rofi picom htop neofetch cava
+```
+
 ## Software Used
 
 ### Base

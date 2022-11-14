@@ -1,9 +1,7 @@
 # This File is Automaticly Generated. Changes inside of this won't persist. For more Information Look into /home/snoweuph/Workspace/rice/rice-bowl
-set $padding 4
-set $gap_size 12
-
-set $border_radius 12
-set $border_size 4
-
-set $opacity 0.8
+window:
+  padding:
+    x: 4
+    y: 4
+  opacity: 0.8
 
