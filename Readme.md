@@ -24,6 +24,16 @@ sudo dnf install i3 zsh alacritty polybar rofi picom htop neofetch cava
 - Notification Server: Dunst
 - Audio Server: Pipewire
 
+### Progress
+
+- [x] Alacritty
+- [x] i3
+- [x] feh
+- [ ] dunst
+- [ ] picom
+- [ ] polybar
+- [ ] rofi
+
 ### CLI
 
 - System Monitor: HTop
