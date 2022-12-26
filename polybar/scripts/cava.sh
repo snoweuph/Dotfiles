@@ -49,3 +49,17 @@ while read -r cmd; do
               ;;
            4)
               output="$output$(echo "%{F$5}▅")"
+              ;;
+           5)
+              output="$output$(echo "%{F$6}▆")"
+              ;;
+           6)
+              output="$output$(echo "%{F$7}▇")"
+              ;;
+           7)
+              output="$output$(echo "%{F$8}█")"
+        esac
+    done
+    echo $output
+
+done < $pipe
