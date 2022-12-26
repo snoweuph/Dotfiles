@@ -31,7 +31,7 @@ sudo dnf install i3 zsh alacritty polybar rofi picom htop neofetch cava
 - [x] feh
 - [ ] dunst
 - [ ] picom
-- [ ] polybar
+- [x] polybar
 - [ ] rofi
 
 ### CLI
