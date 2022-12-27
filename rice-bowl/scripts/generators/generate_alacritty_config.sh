@@ -26,14 +26,14 @@ colors:
     blue: '$RICE_COLOR_LIGHT_BLUE'
     magenta: '$RICE_COLOR_MAGENTA'
 
-" > $RICE_ALACRITTY_DIR_CONFIG/colors.yml
+" > $RICE_ALACRITTY_DIR_CONFIG/colors.nogit.yml
 
 # Generate fonts.yml
 echo "# $RICE_GENERATED_HEADER
 font:
   normal:
     family: \"$RICE_FONT_MONO\"
-" > $RICE_ALACRITTY_DIR_CONFIG/fonts.yml
+" > $RICE_ALACRITTY_DIR_CONFIG/fonts.nogit.yml
 
 # Generate styling.yml
 echo "# $RICE_GENERATED_HEADER
@@ -42,4 +42,4 @@ window:
     x: $RICE_PADDING
     y: $RICE_PADDING
   opacity: $RICE_OPACITY_FLOAT
-" > $RICE_ALACRITTY_DIR_CONFIG/styling.yml
+" > $RICE_ALACRITTY_DIR_CONFIG/styling.nogit.yml

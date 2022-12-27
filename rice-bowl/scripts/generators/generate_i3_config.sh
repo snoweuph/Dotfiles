@@ -29,7 +29,7 @@ set \$color_magenta \"$RICE_COLOR_MAGENTA\"
 set \$color_accent_primary \"$RICE_COLOR_PRIMARY_ACCENT\"
 set \$color_accent_secondary \"$RICE_COLOR_SECONDARY_ACCENT\"
 set \$color_accent_tertiary \"$RICE_COLOR_TERTIARY_ACCENT\"
-" > $RICE_I3_DIR_CONF/colors.conf
+" > $RICE_I3_DIR_CONF/colors.nogit.conf
 
 # Generate fonts.conf
 echo "# $RICE_GENERATED_HEADER
@@ -44,7 +44,7 @@ set \$font_size_big $RICE_FONT_SIZE_BIG
 set \$font_size_icons_normal $RICE_FONT_SIZE_ICONS_NORMAL
 set \$font_size_icons_big $RICE_FONT_SIZE_ICONS_BIG
 
-" > $RICE_I3_DIR_CONF/fonts.conf
+" > $RICE_I3_DIR_CONF/fonts.nogit.conf
 
 # Generate styling2.conf
 echo "# $RICE_GENERATED_HEADER
@@ -55,7 +55,7 @@ set \$border_radius $RICE_BORDER_RADIUS
 set \$border_size $RICE_BORDER_THICKNESS
 
 set \$opacity $RICE_OPACITY_FLOAT
-" > $RICE_I3_DIR_CONF/styling2.conf
+" > $RICE_I3_DIR_CONF/styling.nogit.conf
 
 # Generate apps2.conf
 echo "# $RICE_GENERATED_HEADER
@@ -80,4 +80,4 @@ exec_always $RICE_DIR_CONFIG/polybar/launch.sh
 
 # set wallpaper
 exec --no-startup-id $RICE_DIR_CONFIG/.fehbg
-" > $RICE_I3_DIR_CONF/apps2.conf
+" > $RICE_I3_DIR_CONF/apps.nogit.conf

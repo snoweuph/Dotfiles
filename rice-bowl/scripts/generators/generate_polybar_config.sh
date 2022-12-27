@@ -29,7 +29,7 @@ magenta = $RICE_COLOR_MAGENTA
 warn = \${colors.orange}
 alert = \${colors.red}
 
-" > $RICE_POLYBAR_CONFIG_PATH/colors.ini
+" > $RICE_POLYBAR_CONFIG_PATH/colors.nogit.ini
 
 # Generate fonts.ini
 echo "# $RICE_GENERATED_HEADER
@@ -38,7 +38,7 @@ font-small = $RICE_FONT_MONO:pixelsize=$RICE_FONT_SIZE_SMALL;4
 font-normal = $RICE_FONT_MONO:pixelsize=$RICE_FONT_SIZE_NORMAL;5
 font-big = $RICE_FONT_MONO:pixelsize=$RICE_FONT_SIZE_BIG;6
 
-" > $RICE_POLYBAR_CONFIG_PATH/fonts.ini
+" > $RICE_POLYBAR_CONFIG_PATH/fonts.nogit.ini
 
 # Generate exec.ini
 echo "# $RICE_GENERATED_HEADER
@@ -46,7 +46,7 @@ echo "# $RICE_GENERATED_HEADER
 cava = $RICE_POLYBAR_PATH/scripts/cava.sh \"$RICE_COLOR_PURPLE\" \"$RICE_COLOR_BLUE\" \"$RICE_COLOR_CYAN\" \"$RICE_COLOR_GREEN\" \"$RICE_COLOR_LIME\" \"$RICE_COLOR_YELLOW\" \"$RICE_COLOR_ORANGE\" \"$RICE_COLOR_RED\"
 dunst-snooze = $RICE_POLYBAR_PATH/scripts/dunst-snooze.sh \"$RICE_COLOR_GREEN\" \"$RICE_COLOR_ORANGE\"
 
-" > $RICE_POLYBAR_CONFIG_PATH/exec.ini
+" > $RICE_POLYBAR_CONFIG_PATH/exec.nogit.ini
 
 # Generate style.ini
 echo "# $RICE_GENERATED_HEADER
@@ -54,4 +54,13 @@ echo "# $RICE_GENERATED_HEADER
 gaps = $RICE_GAPS
 border-radius = $RICE_BORDER_RADIUS
 
-" > $RICE_POLYBAR_CONFIG_PATH/style.ini
+" > $RICE_POLYBAR_CONFIG_PATH/style.nogit.ini
+
+# Generate base-settings.ini
+echo "# $RICE_GENERATED_HEADER
+[base-settings/bar]
+
+height = ${RICE_ELEMENT_HEIGHT_SMALL}pt
+dpi = $RICE_DPI
+
+" > $RICE_POLYBAR_PATH/settings.nogit.ini
