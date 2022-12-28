@@ -1,5 +1,7 @@
+# This File is Automaticly Generated. Changes inside of this won't persist. For more Information Look into /home/snoweuph/.config/rice-bowl
 #Import  Config
 import:
-  - ./config/colors.nogit.yml
-  - ./config/fonts.nogit.yml
-  - ./config/styling.nogit.yml
+  - /home/snoweuph/.config/alacritty/config/colors.nogit.yml
+  - /home/snoweuph/.config/alacritty/config/fonts.nogit.yml
+  - /home/snoweuph/.config/alacritty/config/styling.nogit.yml
+

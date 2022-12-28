@@ -3,6 +3,14 @@
 RICE_ALACRITTY_PATH=$RICE_DIR_CONFIG/alacritty
 RICE_ALACRITTY_DIR_CONFIG=$RICE_ALACRITTY_PATH/config
 
+echo "# $RICE_GENERATED_HEADER
+#Import  Config
+import:
+  - $RICE_ALACRITTY_DIR_CONFIG/colors.nogit.yml
+  - $RICE_ALACRITTY_DIR_CONFIG/fonts.nogit.yml
+  - $RICE_ALACRITTY_DIR_CONFIG/styling.nogit.yml
+" >  $RICE_ALACRITTY_PATH/alacritty.yml
+
 # Generate colors.yml
 echo "# $RICE_GENERATED_HEADER
 colors:
