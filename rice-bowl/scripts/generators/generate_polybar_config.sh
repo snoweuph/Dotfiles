@@ -58,9 +58,35 @@ border-radius = $RICE_BORDER_RADIUS
 
 # Generate base-settings.ini
 echo "# $RICE_GENERATED_HEADER
-[base-settings/bar]
+[base/bar]
 
 height = ${RICE_ELEMENT_HEIGHT_SMALL}pt
 dpi = $RICE_DPI
 
+monitor = \${env:MONITOR:}
+locale = it_IT.UTF-8
+screenchange-reload = true
+
+width = 100%
+line-size = 0pt
+
+padding-bottom = 0
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+border-size = \${style.gaps}
+border-bottom-size = 0
+
+pseudo-transparency = true
+
+radius = \${style.border-radius}
+
+foreground = \${colors.white}
+background = \${colors.primary-background}
+
+font-0 = \${fonts.font-normal}
+font-1 = \${fonts.font-big}
 " > $RICE_POLYBAR_PATH/settings.nogit.ini

@@ -30,12 +30,12 @@ default_border pixel $RICE_BORDER_THICKNESS
 default_floating_border pixel $RICE_BORDER_THICKNESS
 
 # Confgire Colors
-# class                 border          		        backgr.         text            indicator               	child_border
-client.focused          $RICE_COLOR_PRIMARY_ACCENT		$RICE_COLOR_DARK_2		$RICE_COLOR_LIGHT_1		$RICE_COLOR_PRIMARY_ACCENT		$RICE_COLOR_LIGHT_1
-client.focused_inactive $RICE_COLOR_SECONDARY_ACCENT	$RICE_COLOR_DARK_2		$RICE_COLOR_LIGHT_1		$RICE_COLOR_SECONDARY_ACCENT	$RICE_COLOR_LIGHT_1
-client.unfocused        $RICE_COLOR_DARK_1			    $RICE_COLOR_DARK_3		$RICE_COLOR_LIGHT_1		$RICE_COLOR_DARK_1				$RICE_COLOR_LIGHT_1
-client.urgent           $RICE_COLOR_RED			       	$RICE_COLOR_ORANGE		$RICE_COLOR_RED			$RICE_COLOR_ORANGE				$RICE_COLOR_LIGHT_1
-client.placeholder	    $RICE_COLOR_LIGHT_1			   	$RICE_COLOR_LIGHT_3		$RICE_COLOR_DARK_1		$RICE_COLOR_LIGHT_1				$RICE_COLOR_LIGHT_1
+# class                 border          		        backgr.         		text            		indicator               			child_border
+client.focused          $RICE_COLOR_PRIMARY_ACCENT		$RICE_COLOR_DARK_2		$RICE_COLOR_LIGHT_1		$RICE_COLOR_PRIMARY_ACCENT			$RICE_COLOR_PRIMARY_ACCENT
+client.focused_inactive $RICE_COLOR_SECONDARY_ACCENT		$RICE_COLOR_DARK_2		$RICE_COLOR_LIGHT_1		$RICE_COLOR_SECONDARY_ACCENT			$RICE_COLOR_SECONDARY_ACCENT
+client.unfocused        $RICE_COLOR_DARK_1			$RICE_COLOR_DARK_3		$RICE_COLOR_LIGHT_1		$RICE_COLOR_DARK_1				$RICE_COLOR_DARK_1
+client.urgent           $RICE_COLOR_RED			       	$RICE_COLOR_ORANGE		$RICE_COLOR_RED			$RICE_COLOR_ORANGE				$RICE_COLOR_RED
+client.placeholder	$RICE_COLOR_LIGHT_1		   	$RICE_COLOR_LIGHT_3		$RICE_COLOR_DARK_1		$RICE_COLOR_LIGHT_1				$RICE_COLOR_LIGHT_1
 
 client.background	    $RICE_COLOR_LIGHT_1
 " > $RICE_I3_DIR_CONF/styling.nogit.conf
