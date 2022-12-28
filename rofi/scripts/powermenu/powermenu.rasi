@@ -9,8 +9,8 @@ configuration {
     background-alt:              @theme-dark-2;
     foreground:                  @theme-light-1;
     selected:                    @theme-accent-primary;
-    active:                      theme-accent-tertiary;
-    urgent:                      theme-accent-secondary;
+    active:                      @theme-accent-tertiary;
+    urgent:                      @theme-accent-secondary;
 }
 
 /*

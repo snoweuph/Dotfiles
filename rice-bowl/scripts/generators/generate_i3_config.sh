@@ -75,7 +75,7 @@ bindsym \$mod+Return exec alacritty
 bindsym \$mod+d exec --no-startup-id rofi -show drun
 
 # open the powermenu
-bindsym \$mod+Shift+e exec \"$RICE_DIR_CONFIG/scripts/powermenu.sh\"
+bindsym \$mod+Shift+e exec \"$RICE_DIR_CONFIG/rofi/scripts/powermenu/powermenu.sh\"
 
 # take a screenshot
 bindsym \$mod+Shift+s exec --no-startup-id flameshot gui --clipboard --accept-on-select --path $RICE_DIR_SCREENSHOTS
