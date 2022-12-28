@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/bin/sh
 # shellcheck disable=SC2016,SC2059
 
 KEYBOARD_ID="Cooler Master Technology Inc. SK650"
@@ -18,12 +17,12 @@ INTERVAL=2,5
 LAYOUT=qwerty
 
 case "$LAYOUT" in
-        qwerty) CONDITION='($3 >= 10 && $3 <= 19) || ($3 >= 24 && $3 <= 33) || ($3 >= 37 && $3 <= 53) >
-        azerty) CONDITION='($3 >= 10 && $3 <= 19) || ($3 >= 24 && $3 <= 33) || ($3 >= 37 && $3 <= 54) >
-        qwertz) CONDITION='($3 >= 10 && $3 <= 20) || ($3 >= 24 && $3 <= 34) || ($3 == 36) || ($3 >= 38>
-    dvorak) CONDITION='($3 >= 10 && $3 <= 19) || ($3 >= 27 && $3 <= 33) || ($3 >= 38 && $3 <= 47) || (>
+	qwerty) CONDITION='($3 >= 10 && $3 <= 19) || ($3 >= 24 && $3 <= 33) || ($3 >= 37 && $3 <= 53) || ($3 >= 52 && $3 <= 58)'; ;;
+	azerty) CONDITION='($3 >= 10 && $3 <= 19) || ($3 >= 24 && $3 <= 33) || ($3 >= 37 && $3 <= 54) || ($3 >= 52 && $3 <= 57)'; ;;
+	qwertz) CONDITION='($3 >= 10 && $3 <= 20) || ($3 >= 24 && $3 <= 34) || ($3 == 36) || ($3 >= 38 && $3 <= 48) || ($3 >= 52 && $3 <= 58)'; ;;
+    dvorak) CONDITION='($3 >= 10 && $3 <= 19) || ($3 >= 27 && $3 <= 33) || ($3 >= 38 && $3 <= 47) || ($3 >= 53 && $3 <= 61)'; ;;
     dontcare) CONDITION='1'; ;; # Just register all key presses, not only letters and numbers
-        *) echo "Unsupported layout \"$LAYOUT\""; exit 1; ;;
+	*) echo "Unsupported layout \"$LAYOUT\""; exit 1; ;;
 esac
 
 # We have to account for the fact we're not listening a whole minute
@@ -31,9 +30,9 @@ multiply_by=60
 divide_by=$INTERVAL
 
 case "$METRIC" in
-        wpm) divide_by=$((divide_by * 5)); ;;
-        cpm) ;;
-        *) echo "Unsupported metric \"$METRIC\""; exit 1; ;;
+	wpm) divide_by=$((divide_by * 5)); ;;
+	cpm) ;;
+	*) echo "Unsupported metric \"$METRIC\""; exit 1; ;;
 esac
 
 hackspeed_cache="$(mktemp -p '' hackspeed_cache.XXXXX)"
@@ -42,24 +41,24 @@ trap 'rm "$hackspeed_cache"' EXIT
 # Write a dot to our cache for each key press
 printf '' > "$hackspeed_cache"
 xinput test "$KEYBOARD_ID" | \
-        stdbuf -o0 awk '$1 == "key" && $2 == "press" && ('"$CONDITION"') {printf "."}' >> "$hackspeed_>
+	stdbuf -o0 awk '$1 == "key" && $2 == "press" && ('"$CONDITION"') {printf "."}' >> "$hackspeed_cache" &
 
 while true; do
-       	# Ask the kernel how big the file is with the command `stat`. The number we
-       	# get is the file size in bytes, which equals the amount of dots the file
-       	# contains, and hence how much keys were pressed since the file was last
-       	# cleared.
-        lines=$(stat --format %s "$hackspeed_cache")
+	# Ask the kernel how big the file is with the command `stat`. The number we
+	# get is the file size in bytes, which equals the amount of dots the file
+	# contains, and hence how much keys were pressed since the file was last
+	# cleared.
+	lines=$(stat --format %s "$hackspeed_cache")
 
-       	# Truncate the cache file so that in the next iteration, we count only new
-       	# keypresses
-        printf '' > "$hackspeed_cache"
+	# Truncate the cache file so that in the next iteration, we count only new
+	# keypresses
+	printf '' > "$hackspeed_cache"
 
-       	# The shell only does integer operations, so make sure to first multiply and
-       	# then divide
-        value=$((lines * multiply_by / divide_by))
+	# The shell only does integer operations, so make sure to first multiply and
+	# then divide
+	value=$((lines * multiply_by / divide_by))
 
-        printf "$FORMAT\\n" "$value"
+	printf "$FORMAT\\n" "$value"
 
-        sleep $INTERVAL
+	sleep $INTERVAL
 done
