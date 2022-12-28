@@ -1,6 +1,6 @@
 /** This File is Automaticly Generated. Changes inside of this won't persist. For more Information Look into /home/snoweuph/.config/rice-bowl **/
 * {
-    font:               "Hack Nerd Font 12";
+    font:               "Hack Nerd Font 14";
     font-icon:          "Hack Nerd Font Mono 64";
     
     theme-dark-4:   #2e3440;

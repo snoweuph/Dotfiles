@@ -44,7 +44,7 @@ font-big = $RICE_FONT_MONO:pixelsize=$RICE_FONT_SIZE_BIG;6
 echo "# $RICE_GENERATED_HEADER
 [exec]
 cava = $RICE_POLYBAR_PATH/scripts/cava.sh \"$RICE_COLOR_PURPLE\" \"$RICE_COLOR_BLUE\" \"$RICE_COLOR_CYAN\" \"$RICE_COLOR_GREEN\" \"$RICE_COLOR_LIME\" \"$RICE_COLOR_YELLOW\" \"$RICE_COLOR_ORANGE\" \"$RICE_COLOR_RED\"
-dunst-snooze = $RICE_POLYBAR_PATH/scripts/dunst-snooze.sh \"$RICE_COLOR_GREEN\" \"$RICE_COLOR_ORANGE\"
+dunst-snooze = $RICE_POLYBAR_PATH/scripts/dunst-snooze.sh \"$RICE_COLOR_SECONDARY_ACCENT\" \"$RICE_COLOR_RED\"
 
 " > $RICE_POLYBAR_CONFIG_PATH/exec.nogit.ini
 
