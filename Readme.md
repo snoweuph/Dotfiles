@@ -33,7 +33,7 @@ sudo dnf install i3 zsh alacritty polybar rofi picom htop neofetch cava
 - [x] picom
 - [x] polybar
 - [x] rofi
-- [ ] cava
+- [x] cava
 - [ ] flameshot
 
 ### CLI

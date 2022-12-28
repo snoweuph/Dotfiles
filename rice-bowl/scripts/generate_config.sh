@@ -11,3 +11,4 @@ source $SH_DIR_generateconfig/generators/generate_dunst_config.sh
 source $SH_DIR_generateconfig/generators/generate_polybar_config.sh
 source $SH_DIR_generateconfig/generators/generate_i3_config.sh
 source $SH_DIR_generateconfig/generators/generate_rofi_config.sh
+source $SH_DIR_generateconfig/generators/generate_cava_config.sh

@@ -8,6 +8,14 @@ cp $RICE_DIR_WALLPAPER/$RICE_WALLPAPER_1 $RICE_ROFI_SCRIPTS_PATH/image.nogit.jpg
 
 # Generate Rasi File
 echo "/** $RICE_GENERATED_HEADER **/
+configuration {
+    modi:               \"drun,filebrowser,window\";
+    show-icons:                 true;
+    display-drun:               \"\";
+    display-filebrowser:        \"\";
+    display-window:             \"\";
+}
+
 * {
     font:               \"$RICE_FONT_NORMAL $RICE_FONT_SIZE_SMALL\";
     font-icon:          \"$RICE_FONT_MONO $RICE_FONT_SIZE_ICONS_BIG\";
