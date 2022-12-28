@@ -13,6 +13,7 @@ echo "
 #################################
 
 frame-opacity = $RICE_OPACITY_FLOAT;
+active-opacity = $RICE_OPACITY_FLOAT;
 inactive-opacity = $RICE_INACTIVE_OPACITY_FLOAT;
 
 corner-radius = $RICE_BORDER_RADIUS;
