@@ -16,10 +16,5 @@ include ./conf/bindings.conf
 include ./conf/workspaces.conf
 # Colors
 include ./conf/colors.nogit.conf
-# Fonts
-include ./conf/fonts.nogit.conf
 
-# Stylings
-include ./conf/styling.conf
-# Apps
 include ./conf/apps.conf
