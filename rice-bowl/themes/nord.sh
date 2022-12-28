@@ -1,6 +1,5 @@
 #!/bin/bash
 
-RICE_ROFI_THEME=
 RICE_GTK_THEME=
 RICE_QT_THEME=
 
