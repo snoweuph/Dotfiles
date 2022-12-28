@@ -84,7 +84,7 @@ bindsym \$mod+Shift+s exec --no-startup-id flameshot gui --clipboard --accept-on
 exec --no-startup-id picom -b --config $RICE_DIR_CONFIG/picom/picom.nogit.conf --experimental-backend
 
 # start polybar
-exec_always $RICE_DIR_CONFIG/polybar/launch.sh
+exec_always $RICE_DIR_CONFIG/polybar/scripts/launch.sh
 
 # set wallpaper
 exec --no-startup-id $RICE_DIR_CONFIG/.fehbg
