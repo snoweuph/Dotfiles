@@ -10,7 +10,7 @@ cp $RICE_DIR_WALLPAPER/$RICE_WALLPAPER_1 $RICE_ROFI_SCRIPTS_PATH/image.nogit.jpg
 echo "/** $RICE_GENERATED_HEADER **/
 * {
     font:               \"$RICE_FONT_NORMAL $RICE_FONT_SIZE_SMALL\";
-    font-icon:          \"$RICE_FONT_NORMAL $RICE_FONT_SIZE_ICONS_BIG\";
+    font-icon:          \"$RICE_FONT_MONO $RICE_FONT_SIZE_ICONS_BIG\";
     
     theme-dark-4:   $RICE_COLOR_DARK_4;
     theme-dark-3:   $RICE_COLOR_DARK_3;
@@ -43,6 +43,10 @@ echo "/** $RICE_GENERATED_HEADER **/
     margin:     0px;
     padding:    0px;
     spacing:    0px;
+
+    theme-border-radius:	${RICE_BORDER_RADIUS}px;
+    theme-padding:		${RICE_PADDING}px;
+    theme-gaps:			${RICE_GAPS}px;
 }
 
 window {
