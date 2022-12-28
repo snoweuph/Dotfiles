@@ -14,9 +14,10 @@ set $mod Mod4
 include ./conf/bindings.conf
 # Workspaces
 include ./conf/workspaces.conf
-# Colors
-include ./conf/colors.nogit.conf
+# Styling
+include ./conf/styling.nogit.conf
 # Fonts
 include ./conf/fonts.nogit.conf
 
+# Applications
 include ./conf/apps.conf
