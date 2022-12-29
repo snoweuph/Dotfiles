@@ -50,7 +50,6 @@ configuration {
     theme-border-radius:	12px;
     theme-padding:		4px;
     theme-gaps:			12px;
-
 }
 
 /*****----- Main Window -----*****/

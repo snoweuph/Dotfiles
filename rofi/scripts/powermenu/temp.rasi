@@ -1,0 +1,316 @@
+/**
+ * rofi -dump-theme output.
+ * Rofi version: 1.7.5
+ **/
+* {
+    font-icon:               "Hack Nerd Font Mono 64";
+    theme-dark-3:            rgba ( 59, 66, 82, 100 % );
+    theme-light-4:           rgba ( 236, 239, 244, 100 % );
+    theme-accent-light-blue: rgba ( 125, 176, 209, 100 % );
+    theme-padding:           4px ;
+    theme-dark-4:            rgba ( 46, 52, 64, 100 % );
+    padding:                 0px ;
+    theme-border-radius:     12px ;
+    theme-accent-secondary:  rgba ( 94, 129, 172, 100 % );
+    text-color:              var(theme-light-1);
+    theme-accent-lime:       rgba ( 173, 191, 124, 100 % );
+    theme-accent-green:      rgba ( 128, 191, 131, 100 % );
+    margin:                  0px ;
+    font:                    "Hack Nerd Font 14";
+    theme-accent-purple:     rgba ( 147, 125, 181, 100 % );
+    theme-light-1:           rgba ( 206, 212, 222, 100 % );
+    theme-accent-orange:     rgba ( 208, 135, 112, 100 % );
+    theme-accent-cyan:       rgba ( 126, 189, 188, 100 % );
+    theme-accent-primary:    rgba ( 125, 176, 209, 100 % );
+    spacing:                 0px ;
+    theme-accent-magenta:    rgba ( 181, 119, 156, 100 % );
+    theme-dark-1:            rgba ( 76, 86, 106, 100 % );
+    theme-light-2:           rgba ( 216, 222, 233, 100 % );
+    theme-accent-tertiary:   rgba ( 147, 125, 181, 100 % );
+    theme-accent-blue:       rgba ( 94, 129, 172, 100 % );
+    theme-gaps:              12px ;
+    background-color:        transparent;
+    font-icon-small:         "Hack Nerd Font Mono 22";
+    theme-dark-2:            rgba ( 67, 76, 94, 100 % );
+    theme-light-3:           rgba ( 229, 233, 240, 100 % );
+    theme-accent-red:        rgba ( 191, 97, 106, 100 % );
+    theme-accent-yellow:     rgba ( 235, 203, 139, 100 % );
+}
+window {
+    width:            33.0000% ;
+    enabled:          true;
+    location:         center;
+    background-color: var(theme-dark-4);
+    border-color:     var(theme-accent-primary);
+    border-radius:    var(theme-border-radius);
+    border:           4px ;
+}
+mainbox {
+    orientation:      vertical;
+    enabled:          true;
+    background-color: transparent;
+    spacing:          0px ;
+    children:         [ "inputbar","listbox" ];
+}
+listbox {
+    padding:          var(theme-gaps);
+    background-color: transparent;
+    orientation:      vertical;
+    spacing:          var(theme-gaps);
+    children:         [ "message","listview" ];
+}
+inputbar {
+    padding:          var(theme-gaps);
+    enabled:          true;
+    background-color: transparent;
+    orientation:      horizontal;
+    spacing:          var(theme-gaps);
+    text-color:       var(text-color);
+    children:         [ "entry","dummy","mode-switcher" ];
+}
+entry {
+    enabled:           true;
+    cursor:            text;
+    width:             calc( ( 33.0000%  - 222px  ));
+    padding:           var(theme-gaps);
+    text-color:        inherit;
+    background-color:  var(theme-dark-1);
+    border-radius:     var(theme-border-radius);
+    placeholder-color: inherit;
+    placeholder:       "Search";
+    expand:            false;
+}
+dummy {
+    background-color: transparent;
+    expand:           true;
+}
+mode-switcher {
+    enabled:          true;
+    background-color: transparent;
+    spacing:          var(theme-gaps);
+    text-color:       var(text-color);
+}
+button {
+    width:            45px ;
+    padding:          var(theme-padding);
+    background-color: var(theme-dark-1);
+    cursor:           pointer;
+    font:             var(font-icon-small);
+    border-radius:    var(theme-border-radius);
+    text-color:       inherit;
+}
+button selected {
+    background-color: var(theme-accent-primary);
+    text-color:       var(text-color);
+}
+listview {
+    text-color:       var(text-color);
+    enabled:          true;
+    fixed-height:     true;
+    cursor:           "default";
+    scrollbar:        false;
+    reverse:          false;
+    cycle:            true;
+    lines:            7;
+    fixed-columns:    true;
+    dynamic:          true;
+    layout:           vertical;
+    columns:          1;
+    spacing:          var(theme-gaps);
+    background-color: transparent;
+}
+element {
+    padding:          var(theme-padding);
+    enabled:          true;
+    background-color: inherit;
+    cursor:           pointer;
+    spacing:          var(theme-gaps);
+    border-radius:    var(theme-border-radius);
+    text-color:       var(text-color);
+}
+element normal.urgent {
+    background-color: var(theme-accent-tertiary);
+    text-color:       var(text-color);
+}
+element normal.active {
+    background-color: var(theme-accent-secondary);
+    text-color:       var(text-color);
+}
+element selected.normal {
+    background-color: var(theme-accent-primary);
+    text-color:       var(theme-dark-1);
+}
+element selected.urgent {
+    background-color: var(theme-accent-tertiary);
+    text-color:       var(text-color);
+}
+element selected.active {
+    background-color: var(theme-accent-tertiary);
+    text-color:       var(text-color);
+}
+element-icon {
+    background-color: transparent;
+    size:             28px ;
+    cursor:           inherit;
+    text-color:       inherit;
+}
+element-text {
+    background-color: transparent;
+    cursor:           inherit;
+    vertical-align:   0.50;
+    horizontal-align: 0.00;
+    text-color:       inherit;
+}
+message {
+    background-color: transparent;
+}
+textbox {
+    padding:          var(theme-padding);
+    background-color: var(theme-dark-1);
+    vertical-align:   0.50;
+    horizontal-align: 0.00;
+    border-radius:    var(theme-border-radius);
+    text-color:       var(text-color);
+}
+error-message {
+    padding:          var(theme-padding);
+    background-color: var(theme-dark-4);
+    border-radius:    var(theme-border-radius);
+    text-color:       var(text-color);
+}
+/*****----- Configuration -----*****/
+configuration {
+    show-icons:                 false;
+}
+
+/*****----- Global Properties -----*****/
+* {
+    background:                  @theme-dark-4;
+    background-alt:              @theme-dark-2;
+    foreground:                  @theme-light-1;
+    selected:                    @theme-accent-primary;
+    active:                      @theme-accent-secondary;
+    urgent:                      @theme-accent-tertiary;
+}
+
+/*
+USE_BUTTONS=YES
+*/
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       500px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    padding:                     @theme-padding;
+    border:                      0px solid;
+    border-radius:               @theme-border-radius;
+    border-color:                @selected;
+    cursor:                      "default";
+    background-color:            @background;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    background-color:            transparent;
+    orientation:                 horizontal;
+    children:                    [ "imagebox", "listview" ];
+}
+
+/*****----- Imagebox -----*****/
+imagebox {
+    spacing:                     @theme-gaps;
+    padding:                     @theme-padding;
+    background-color:            transparent;
+    background-image:            url("~/.config/rofi/scripts/image.nogit.jpg", height);
+    children:                    [ "inputbar", "dummy", "message" ];
+}
+
+/*****----- User -----*****/
+userimage {
+    margin:                      0px 0px;
+    border:                      @theme-gaps;
+    border-radius:               @theme-border-radius;
+    border-color:                @background-alt;
+    background-color:            transparent;
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    padding:                     @theme-padding;
+    border-radius:               @theme-border-radius;
+    background-color:            @active;
+    text-color:                  @foreground;
+    children:                    [ "dummy", "prompt", "dummy"];
+}
+
+dummy {
+    background-color:            transparent;
+}
+
+prompt {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+/*****----- Message -----*****/
+message {
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     @theme-padding;
+    border-radius:               @theme-border-radius;
+    background-color:            @urgent;
+    text-color:                  @background;
+}
+textbox {
+    background-color:            inherit;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     2;
+    lines:                       3;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     @theme-gaps;
+    margin:                      @theme-padding;
+    background-color:            transparent;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    padding:                     0px 0px;
+    border-radius:               @theme-border-radius;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+element-text {
+    font:                        @font-icon;
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+element selected.normal {
+    background-color:            var(selected);
+    text-color:                  var(background);
+}

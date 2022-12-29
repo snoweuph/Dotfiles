@@ -59,7 +59,6 @@ configuration {
     theme-border-radius:	${RICE_BORDER_RADIUS}px;
     theme-padding:		${RICE_PADDING}px;
     theme-gaps:			${RICE_GAPS}px;
-
 }
 
 /*****----- Main Window -----*****/
@@ -104,7 +103,7 @@ inputbar {
 entry {
     enabled:                     true;
     expand:                      false;
-    width:                       calc(33% - $(($((RICE_FONT_SIZE_ICONS_SMALL * 3)) + $((RICE_GAPS * 11)) + $((RICE_PADDING * 6))))px);
+    width:                       calc(33% - $(($((RICE_FONT_SIZE_ICONS_SMALL * 3)) + $((RICE_GAPS * 13))))px);
     padding:                     @theme-gaps;
     border-radius:               @theme-border-radius;
     background-color:            @theme-dark-1;
