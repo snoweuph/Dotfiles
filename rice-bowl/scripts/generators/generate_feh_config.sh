@@ -2,7 +2,13 @@
 
 # Generate Fehbg
 echo "#!/bin/bash
-feh --no-fehbg --bg-scale $RICE_DIR_WALLPAPER/$RICE_WALLPAPER_1 $RICE_DIR_WALLPAPER/$RICE_WALLPAPER_2 $RICE_DIR_WALLPAPER/$RICE_WALLPAPER_3
-" > $RICE_DIR_CONFIG/.fehbg
+# $RICE_GENERATED_HEADER
 
-$RICE_DIR_CONFIG/.fehbg
+feh --no-fehbg --bg-scale $RICE_DIR_WALLPAPER/$RICE_WALLPAPER_1 $RICE_DIR_WALLPAPER/$RICE_WALLPAPER_2 $RICE_DIR_WALLPAPER/$RICE_WALLPAPER_3
+" > ~/.fehbg
+
+# Mark as Executable
+chmod +x ~/.fehbg
+
+# Execute
+~/.fehbg
