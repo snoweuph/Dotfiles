@@ -95,7 +95,7 @@ inputbar {
 entry {
     enabled:                     true;
     expand:                      false;
-    width:                       calc(33% / 50 * 32);
+    width:                       calc(33% - 222px);
     padding:                     @theme-gaps;
     border-radius:               @theme-border-radius;
     background-color:            @theme-dark-1;

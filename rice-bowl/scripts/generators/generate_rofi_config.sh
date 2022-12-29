@@ -104,7 +104,7 @@ inputbar {
 entry {
     enabled:                     true;
     expand:                      false;
-    width:                       calc(33% / 50 * 32);
+    width:                       calc(33% - $(($((RICE_FONT_SIZE_ICONS_SMALL * 3)) + $((RICE_GAPS * 11)) + $((RICE_PADDING * 6))))px);
     padding:                     @theme-gaps;
     border-radius:               @theme-border-radius;
     background-color:            @theme-dark-1;
