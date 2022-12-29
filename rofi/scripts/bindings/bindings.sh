@@ -18,7 +18,7 @@ echo "entry {width: calc(33% - $(($((RICE_PADDING + RICE_GAPS)) * 2))px);}" >> $
 # Rofi CMD
 rofi_cmd() {
     rofi -dmenu \
-        -p " $USER" \
+        -i \
         -theme "${SCRIPT_DIR}/temp.rasi"
 }
 

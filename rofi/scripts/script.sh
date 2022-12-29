@@ -19,7 +19,7 @@ uptime="`uptime -p | sed -e 's/up //g'`"
 # Rofi CMD
 rofi_cmd() {
     rofi -dmenu \
-        -p " $USER" \
+        -i
         -mesg "祥 Uptime: $uptime" \
         -theme "${SCRIPT_DIR}/temp.rasi"
 }

@@ -34,13 +34,12 @@ sudo dnf install i3 zsh alacritty polybar rofi picom htop neofetch cava
 - [x] polybar
 - [x] rofi
 - [x] cava
-- [-] flameshot
+- [x] flameshot
 
 ### CLI
 
 - System Monitor: HTop
 - Music Visualizer: Cava
-- Markdown Viewer: Glow
 - Image Viewer: Feh
 - Fetch: Neofetch
 

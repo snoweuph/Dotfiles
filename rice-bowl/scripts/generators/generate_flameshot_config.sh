@@ -1,0 +1,16 @@
+#!/bin/bash
+
+RICE_FLAMESHOT_PATH=$RICE_DIR_CONFIG/flameshot
+
+# Generate flameshot.conf
+echo "# $RICE_GENERATED_HEADER
+[General]
+uiColor=$RICE_COLOR_TERTIARY_ACCENT
+contrastUiColor=$RICE_COLOR_SECONDARY_ACCENT
+
+drawColor=$RICE_COLOR_PRIMARY_ACCENT
+userColors=picker, $RICE_COLOR_PRIMARY_ACCENT, $RICE_COLOR_SECONDARY_ACCENT, $RICE_COLOR_TERTIARY_ACCENT
+
+disabledTrayIcon=true
+
+" > $RICE_FLAMESHOT_PATH/flameshot.ini

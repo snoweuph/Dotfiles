@@ -12,15 +12,12 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status # Mute Speaker
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status # Mute Mic
 
-bindsym $mod+Return exec alacritty # open a Terminal
 
-bindsym $mod+d exec --no-startup-id rofi -show drun # open Rofi
-
-bindsym $mod+b exec --no-startup-id firefox # open a Browser
 
 # Set Lockscreen for Suspending
 exec --no-startup-id xss-lock --transfer-sleep-lock --i3lock --nofork
 
 #KDE Connect
 exec --no-startup-id kdeconnect-indicator
+
 

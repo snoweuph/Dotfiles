@@ -43,15 +43,11 @@ client.background	    $RICE_COLOR_LIGHT_1
 # Generate apps2.conf
 echo "# $RICE_GENERATED_HEADER
 
-bindsym \$mod+Return exec alacritty # open a terminal
+bindsym \$mod+Shift+e exec $RICE_DIR_CONFIG/rofi/scripts/powermenu/powermenu.sh # open the power Menu
 
-bindsym \$mod+d exec --no-startup-id rofi -show drun # open rofi
+bindsym \$mod+Shift+h exec $RICE_DIR_CONFIG/rofi/scripts/bindings/bindings.sh # open the bindings/help Menu
 
-bindsym \$mod+Shift+e exec $RICE_DIR_CONFIG/rofi/scripts/powermenu/powermenu.sh # open the powermenu
-
-bindsym \$mod+Shift+h exec $RICE_DIR_CONFIG/rofi/scripts/bindings/bindings.sh # open the bindings/help menu
-
-bindsym \$mod+Shift+s exec --no-startup-id flameshot gui --clipboard --accept-on-select --path $RICE_DIR_SCREENSHOTS # take a screenshot
+bindsym \$mod+Shift+s exec --no-startup-id flameshot gui --clipboard --accept-on-select --path $RICE_DIR_SCREENSHOTS # take a Screenshot
 
 # start picom
 exec --no-startup-id picom -b --config $RICE_DIR_CONFIG/picom/picom.nogit.conf --experimental-backend
