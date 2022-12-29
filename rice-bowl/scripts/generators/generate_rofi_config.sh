@@ -14,6 +14,8 @@ configuration {
     display-drun:               \"\";
     display-filebrowser:        \"\";
     display-window:             \"\";
+	drun-display-format:        \"{name}\";
+	window-format:              \"{w} · {c} · {t}\";
 }
 
 * {
