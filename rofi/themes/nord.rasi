@@ -1,6 +1,6 @@
 /** This File is Automaticly Generated. Changes inside of this won't persist. For more Information Look into /home/snoweuph/.config/rice-bowl **/
 configuration {
-    modi:               "drun,filebrowser,window";
+    modi:                       "drun,filebrowser,window";
     show-icons:                 true;
     display-drun:               "";
     display-filebrowser:        "";
@@ -9,7 +9,9 @@ configuration {
 
 * {
     font:               "Hack Nerd Font 14";
+    font-icon-small:    "Hack Nerd Font Mono 22";
     font-icon:          "Hack Nerd Font Mono 64";
+
     
     theme-dark-4:   #2e3440;
     theme-dark-3:   #3b4252;
@@ -46,72 +48,167 @@ configuration {
     theme-border-radius:	12px;
     theme-padding:		4px;
     theme-gaps:			12px;
+
 }
 
+/*****----- Main Window -----*****/
 window {
-    background-color:   @theme-dark-4;
-    border-color:	@theme-accent-primary;
-
-    location:   center;
-    width:      480px;
-    border:     1px;
+    /* properties for window widget */
+    location:                    center;
+    width:                       33%;
+    enabled:                     true;
+    border-radius:               @theme-border-radius;
+    border:                      4px;
+    border-color:                @theme-accent-primary;
+    background-color:            @theme-dark-4;
 }
 
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listbox" ];
+}
+
+listbox {
+    spacing:                     @theme-gaps;
+    padding:                     @theme-gaps;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "message", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
 inputbar {
-    padding:    8px 12px;
-    spacing:    12px;
-    children:   [ prompt, entry ];
+    enabled:                     true;
+    spacing:                     @theme-gaps;
+    padding:                     @theme-gaps;
+    background-color:            transparent;
+    text-color:                  @text-color;
+    orientation:                 horizontal;
+    children:                    [ "entry", "dummy", "mode-switcher" ];
+}
+entry {
+    enabled:                     true;
+    expand:                      false;
+    width:                       calc(33% / 50 * 32);
+    padding:                     @theme-gaps;
+    border-radius:               @theme-border-radius;
+    background-color:            @theme-dark-1;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search";
+    placeholder-color:           inherit;
+}
+dummy {
+    expand:                      true;
+    background-color:            transparent;
 }
 
-prompt, entry, element-text, element-icon {
-    vertical-align: 0.5;
+/*****----- Mode Switcher -----*****/
+mode-switcher{
+    enabled:                     true;
+    spacing:                     @theme-gaps;
+    background-color:            transparent;
+    text-color:                  @text-color;
+}
+button {
+    font:                        @font-icon-small;
+    width:                       45px;
+    padding:                     @theme-padding;
+    border-radius:               @theme-border-radius;
+    background-color:            @theme-dark-1;
+    text-color:                  inherit;
+    cursor:                      pointer;
+}
+button selected {
+    background-color:            @theme-accent-primary;
+    text-color:                  @text-color;
 }
 
-prompt {
-    text-color: @theme-accent-primary;
-}
-
+/*****----- Listview -----*****/
 listview {
-    lines:	8;
-    columns:    1;
-
-    fixed-height:   false;
+    enabled:                     true;
+    columns:                     1;
+    lines:                       7;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     @theme-gaps;
+    background-color:            transparent;
+    text-color:                  @text-color;
+    cursor:                       "default";
 }
 
+/*****----- Elements -----*****/
 element {
-    padding:    8px;
-    spacing:    8px;
+    enabled:                     true;
+    spacing:                     @theme-gaps;
+    padding:                     @theme-padding;
+    border-radius:               @theme-border-radius;
+    background-color:            inherit;
+    text-color:                  @text-color;
+    cursor:                      pointer;
 }
 
-element normal urgent {
-    text-color: @theme-accent-tertiary;
+element normal.urgent {
+    background-color:            @theme-accent-tertiary;
+    text-color:                  @text-color;
 }
-
-element normal active {
-    text-color: @theme-accent-primary;
+element normal.active {
+    background-color:            @theme-accent-secondary;
+    text-color:                  @text-color;
 }
-
-element selected {
-    text-color: @theme-dark-4;
+element selected.normal {
+    background-color:            @theme-accent-primary;
+    text-color:                  @theme-dark-1;
 }
-
-element selected normal {
-    background-color:   @theme-accent-primary;
+element selected.urgent {
+    background-color:            @theme-accent-tertiary;
+    text-color:                  @text-color;
 }
-
-element selected urgent {
-    background-color:   @theme-accent-tertiary;
+element selected.active {
+    background-color:            @theme-accent-tertiary;
+    text-color:                  @text-color;
 }
-
-element selected active {
-    background-color:   @theme-accent-secondary;
-}
-
 element-icon {
-    size:   0.75em;
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        28px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
 }
 
-element-text {
-    text-color: inherit;
+/*****----- Message -----*****/
+message {
+    background-color:            transparent;
 }
+textbox {
+    padding:                     @theme-padding;
+    border-radius:               @theme-border-radius;
+    background-color:            @theme-dark-1;
+    text-color:                  @text-color;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+error-message {
+    padding:                     @theme-padding;
+    border-radius:               @theme-border-radius;
+    background-color:            @theme-dark-4;
+    text-color:                  @text-color;
+}
+
 
