@@ -1,0 +1,8 @@
+Up				Move Up
+Down			Move Down
+
+Shift-Right		Switch to Next Mode
+Shift-Left		Switch to Previous Mode
+
+Return			Accept Entry
+Delete			In Window Mode Kill the Window

@@ -22,8 +22,14 @@ rofi_cmd() {
         -theme "${SCRIPT_DIR}/temp.rasi"
 }
 
-# Generate Bindings Array
 EntryString=""
+SPLIT_SIGN=" | "
+
+###########################
+##           I3          ##
+###########################
+
+# Generate Bindings Array
 BindingsI3=()
 
 #Icons
@@ -49,17 +55,51 @@ for i in "${BindingsI3[@]}"; do
     if [[ -n "$STRING" ]]; then
         DESCRIPTIOR=${STRING##*#}
         Action=${STRING%exec*}
-        BindingsI3[$f]="${Action} ${DESCRIPTIOR}";
+        BindingsI3[$f]="${Action}${SPLIT_SIGN}${DESCRIPTIOR}";
+    else
+        BINDING=$(echo $i | awk '{print $1}')
+        DESCRIPTIOR=$(echo $i | awk '{print $2}')
+        BindingsI3[$f]="${BINDING}${SPLIT_SIGN}${DESCRIPTIOR}"
     fi
     f=$((f+1))
 done
 
-
 # Append To Entry String
 for i in "${BindingsI3[@]}"; do
-  EntryString="${EntryString}i3 ${i}\n"
+  EntryString="${EntryString}${ICON_I3} ${i}\n"
 done
 
+###########################
+##         ROFI          ##
+###########################
+
+
+# Generate Bindings Array
+BindingsRofi=()
+
+#Icons
+ICON_ROFI="Rofi"
+
+# Get I3 Bindings
+while read -r line; do
+    BindingsRofi+=( "${line}" )
+done < <(cat ~/.config/rofi/bindings.txt | grep -v -e '^$')
+
+f=0
+for i in "${BindingsRofi[@]}"; do
+    BINDING=$(echo $i | awk '{print $1}')
+    DESCRIPTIOR=$(echo $i | awk '{sub($1 FS,"")}7')
+    BindingsRofi[$f]="${BINDING}${SPLIT_SIGN}${DESCRIPTIOR}"
+    f=$((f+1))
+done
+
+# Append To Entry String
+for i in "${BindingsRofi[@]}"; do
+  EntryString="${EntryString}${ICON_ROFI} ${i}\n"
+done
+
+
+###########################
 echo -en $EntryString | rofi_cmd
 
 #\0icon\x1f<span color='red'>i3</span>\n
