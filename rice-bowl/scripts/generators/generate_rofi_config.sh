@@ -16,6 +16,19 @@ configuration {
     display-window:             \"\";
 	drun-display-format:        \"{name}\";
 	window-format:              \"{w} · {c} · {t}\";
+    window-command:             \"$RICE_ROFI_SCRIPTS_PATH/killwindowbyid/killbyid.sh {window}\";          
+
+    kb-move-char-forward:       \"\";
+    kb-move-char-back:          \"\";
+    kb-remove-char-forward:     \"\";
+
+
+    kb-accept-entry:            \"Return\";
+    kb-mode-next:               \"Right\";
+    kb-mode-previous:           \"Left\";
+
+
+    kb-accept-alt:            \"Delete\";
 }
 
 * {

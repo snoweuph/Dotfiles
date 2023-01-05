@@ -7,7 +7,7 @@ I've created a Dir under .config called Rice Bowl which is something like the Ri
 ### Fedora
 
 ```
-sudo dnf install i3 zsh alacritty polybar rofi picom htop neofetch cava
+sudo dnf install i3 zsh alacritty polybar rofi picom htop neofetch cava wmctrl
 ```
 
 ## Software Used

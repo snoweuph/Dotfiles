@@ -51,7 +51,7 @@ case $manager in
 	apt) packages="$(dpkg-query -f '${binary:Package}\n' -W | wc -l)";;
 	#rpm) packages="$(rpm -qa --last| wc -l)";;
 	yum) packages="$(yum list installed | wc -l)";;
-	dnf) packages="$(dnf list installed | wc -l)";;
+	#dnf) packages="$(dnf list installed | wc -l)";;
 	zypper) packages="$(zypper se | wc -l)";;
 	pacman) packages="$(pacman -Q | wc -l)";;
 	yay) packages="$(yay -Q | wc -l)";;
@@ -171,7 +171,6 @@ c2="${reset}${yellow}"          # third color
 ## OUTPUT
 
 cat <<EOF
-
 ${c0}      ___     ${nc}${USER}${red}@${reset}${hn}${host}${reset} 
 ${c0}     (${c1}.. ${c0}\    ${lc}  ${ic}${os}${reset}
 ${c0}     (${c2}<> ${c0}|    ${lc}  ${ic}${kernel}${reset}

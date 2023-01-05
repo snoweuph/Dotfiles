@@ -32,22 +32,9 @@ rofi_cmd() {
         -theme "${SCRIPT_DIR}/temp.rasi"
 }
 
-# Confirmation CMD
-confirm_cmd() {
-	rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 350px;}' \
-		-theme-str 'mainbox {orientation: vertical; children: [ "inputbar", "listview" ];}' \
-		-theme-str 'listview {columns: 2; lines: 1;}' \
-		-theme-str 'element-text {horizontal-align: 0.5;}' \
-		-theme-str 'textbox {horizontal-align: 0.5;}' \
-		-u 1 \
-		-dmenu \
-		-p 'Are you Sure?' \
-		-theme ${SCRIPT_DIR}/temp.rasi
-}
-
 # Ask for confirmation
 confirm_exit() {
-	echo -e "$yes\n$no" | confirm_cmd
+	$SCRIPT_DIR/../confirm/confirm.sh "Are you Sure?" "$yes" "$no"
 }
 
 # Pass variables to rofi dmenu
