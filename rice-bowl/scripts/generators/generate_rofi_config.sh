@@ -18,17 +18,14 @@ configuration {
 	window-format:              \"{w} · {c} · {t}\";
     window-command:             \"$RICE_ROFI_SCRIPTS_PATH/killwindowbyid/killbyid.sh {window}\";          
 
-    kb-move-char-forward:       \"\";
-    kb-move-char-back:          \"\";
     kb-remove-char-forward:     \"\";
 
 
     kb-accept-entry:            \"Return\";
-    kb-mode-next:               \"Right\";
-    kb-mode-previous:           \"Left\";
+    kb-mode-next:               \"Shift-Right\";
+    kb-mode-previous:           \"Shift-Left\";
 
-
-    kb-accept-alt:            \"Delete\";
+    kb-accept-alt:            \"Shift-Return,Delete\";
 }
 
 * {
