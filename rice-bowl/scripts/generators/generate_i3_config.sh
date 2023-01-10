@@ -2,6 +2,8 @@
 
 RICE_I3_PATH=$RICE_DIR_CONFIG/i3
 RICE_I3_DIR_CONF=$RICE_I3_PATH/conf
+mkdir -p $RICE_I3_PATH
+mkdir -p $RICE_I3_DIR_CONF
 
 # Generate fonts.conf
 echo "# $RICE_GENERATED_HEADER

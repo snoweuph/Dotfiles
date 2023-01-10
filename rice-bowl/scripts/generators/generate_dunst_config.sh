@@ -2,6 +2,8 @@
 
 RICE_DUNST_PATH=$RICE_DIR_CONFIG/dunst
 RICE_DUNST_DIR_CONFIG=$RICE_DUNST_PATH/dunstrc.d
+mkdir -p $RICE_DUNST_PATH
+mkdir -p $RICE_DUNST_DIR_CONFIG
 
 # Generate 00.colors.conf
 echo "# $RICE_GENERATED_HEADER

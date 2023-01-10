@@ -1,6 +1,7 @@
 #!/bin/bash
 
 RICE_CAVA_PATH=$RICE_DIR_CONFIG/cava
+mkdir -p $RICE_CAVA_PATH
 
 echo "# $RICE_GENERATED_HEADER
 

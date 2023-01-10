@@ -2,6 +2,8 @@
 
 RICE_ROFI_PATH=$RICE_DIR_CONFIG/rofi
 RICE_ROFI_SCRIPTS_PATH=$RICE_ROFI_PATH/scripts
+mkdir -p $RICE_ROFI_PATH
+mkdir -p $RICE_ROFI_SCRIPTS_PATH
 
 # Coppy Over First Wallpaper to be used by scripts
 cp $RICE_DIR_WALLPAPER/$RICE_WALLPAPER_1 $RICE_ROFI_SCRIPTS_PATH/image.nogit.jpg

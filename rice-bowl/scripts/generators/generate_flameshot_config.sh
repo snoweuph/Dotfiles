@@ -1,6 +1,7 @@
 #!/bin/bash
 
 RICE_FLAMESHOT_PATH=$RICE_DIR_CONFIG/flameshot
+mkdir -p $RICE_FLAMESHOT_PATH
 
 # Generate flameshot.conf
 echo "# $RICE_GENERATED_HEADER

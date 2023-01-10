@@ -1,6 +1,7 @@
 #!/bin/bash
 
 RICE_PICOM_PATH=$RICE_DIR_CONFIG/picom
+mkdir -p $RICE_PICOM_PATH
 
 # Generate picom.conf
 echo "# $RICE_GENERATED_HEADER" > $RICE_PICOM_PATH/picom.nogit.conf
