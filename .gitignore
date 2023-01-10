@@ -16,8 +16,12 @@
 !i3/**/*
 !i3/
 
+# Include Awesone Dir
+!awesome/**/*
+!awesome
+
 # Include Picom Dir
-!picom/*
+!picom/**/*
 !picom/
 
 # Include Polybar Dir
@@ -25,15 +29,15 @@
 !polybar
 
 # Include Allacrity Dir
-!alacritty/*
+!alacritty/**/*
 !alacritty/
 
 # Include Flameshot Dir
-!flameshot/*
+!flameshot/**/*
 !flameshot/
 
 # Include Cava Dir
-!cava/*
+!cava/**/*
 !cava/
 
 # Include Rofi Dir
