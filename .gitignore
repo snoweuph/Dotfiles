@@ -1,0 +1,45 @@
+# Ignore All
+*
+
+# Include .gitignore
+!.gitignore
+
+# Include Readme.md
+!Readme.md
+
+# Include Rice-bowl Dir
+!rice-bowl/**/*
+!rice-bowl/*
+!rice-bowl/
+
+# Include I3 Dir
+!i3/**/*
+!i3/
+
+# Include Picom Dir
+!picom/*
+!picom/
+
+# Include Polybar Dir
+!polybar/**/*
+!polybar
+
+# Include Allacrity Dir
+!alacritty/*
+!alacritty/
+
+# Include Flameshot Dir
+!flameshot/*
+!flameshot/
+
+# Include Cava Dir
+!cava/*
+!cava/
+
+# Include Rofi Dir
+!rofi/**/*
+!rofi/
+
+# Include Dunst Dir
+!dunst/**/*
+!dunst/
